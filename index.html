@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="es">
+ <head>
+    <meta charset="utf-8"/>
+    <title> Algebra II </title>
+    <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
+    <link href="css/style.css" rel="stylesheet" type="text/css">
+ </head> 
+ <body>
+    <div class="container centro">
+      <div class="row">
+        <div class="card" width="25%">
+          <div class="card card-block" style="padding:30px">
+              <form id="formulario" method="POST">
+                  <div class="form-group">
+                      <h2><span id="title">Encriptar</span> Mensaje</h2>
+                  </div>
+                  <div class="form-group">
+                    <div class="custom-control custom-switch">
+                      <input type="checkbox" value="D" name="encdec" class="custom-control-input" id="encdec">
+                      <label class="custom-control-label" for="encdec">Descifrar</label>
+                    </div>
+                  </div>
+                  <div id="numeros">
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="Texto a Encriptar" name="mensaje">
+                    </div>
+                    <div class="form-row">
+                      <div class="form-group col">
+                        <input class="form-control" type="text" placeholder="Número I" name="primo1">
+                      </div>
+                      <div class="form-group col">
+                        <input class="form-control" type="text" placeholder="Número II" name="primo2">
+                      </div>
+                    </div>
+                  </div>
+                  <div id="clave">
+                    <div class="form-group">
+                      <p>Último mensaje guardado:</p>
+                      <p id="ultimo"></p>
+                    </div>
+                    <div class="form-group">
+                      <input class="form-control" type="text" placeholder="Clave" name="clave">
+                    </div>
+                  </div>
+                  <div class="form-group">
+                      <button type="reset" class="btn btn-danger">Limpiar datos</button>
+                      <button id="btn-Submit" type="submit" class="btn btn-primary">Encriptar</button>
+                  </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-xl">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Encriptando mensaje</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body" id="resultados">
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Cerrar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script src="js/scripts.js" rel="js"></script>
+  </body>
+</html>
